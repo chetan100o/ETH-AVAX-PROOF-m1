@@ -1,16 +1,16 @@
 # ETH-AVAX-PROOF-m1
 # Error Handling In Solidity (Module-1):
-The contract includes a function called "castVote" that allows users to cast their votes. Let's explore the error handling process in this function:
+The contract includes a function called "mark attendance" that allows users to cast their marked their attendance. Let's explore the error handling process in this function:
 
-The "require" statement is used to check if the sender (the person executing the transaction) has already voted. If the sender has already voted, the execution is immediately stopped, and an exception is thrown with the error message "Already voted". This prevents multiple votes from the same address and ensures the integrity of the voting process.
+The "require" statement is used to check if the sender (the person executing the transaction) has already attended. If the sender has already attended, the execution is immediately stopped, and an exception is thrown with the error message "Already attended". This prevents multiple attendance from the same address and ensures the integrity of the marking attendance process.
 
-Afterward, the total number of votes is incremented, and the sender's voting status is marked as true in the "hasVoted" mapping.
+Afterward, the total number of antendee's is incremented, and the sender's attendance status is marked as true in the "hasmarked" mapping.
 
-Next, an "if" statement is used to check if the total number of votes exceeds the limit of 10. If the condition is met, the "revert" statement is triggered, causing the transaction to be reverted with the error message "Voting limit exceeded". This handles the case where the voting limit has been reached, and no further votes can be cast.
+Next, an "if" statement is used to check if the total number of attended exceeds the limit of 100. If the condition is met, the "revert" statement is triggered, causing the transaction to be reverted with the error message "marking limit exceeded". This handles the case where the class attending limit has been reached, and no further person can attend the session.
 
-To provide an additional layer of validation, an "assert" statement is placed after the vote counting logic. It ensures that the total number of votes does not exceed the limit. If the assertion fails, indicating a logical error, the execution is halted, catching any unexpected behavior that may violate the voting logic.
+To provide an additional layer of validation, an "assert" statement is placed after the attendance counting logic. It ensures that the total number of attendance does not exceed the limit. If the assertion fails, indicating a logical error, the execution is halted, catching any unexpected behavior that may violate the voting logic.
 
-The "castVote" function demonstrates how require, assert, and revert statements are used for error handling in the voting contract, preventing duplicate votes, enforcing voting limits, and maintaining the contract's integrity.
+The "markAtendance" function demonstrates how require, assert, and revert statements are used for error handling in the Attend contract, preventing duplicate Attendance, enforcing Attending limits, and maintaining the contract's integrity.
 
 ### More on require, assert, revert:
 
